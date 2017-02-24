@@ -1,0 +1,14 @@
+module AuctionApp {
+    struct Item {
+        string description;
+        float initialPrice;
+    };
+    interface AuctionServer {
+        string viewAuctionStatus(in string id);
+        string bid(in string id, in float amount);
+        string viewBidStatus(in string id);
+        string offerItem(in string id, in Item item);
+        string viewHighBidder(in string id);
+        string sell(in string id);
+    };
+};
